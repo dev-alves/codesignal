@@ -31,12 +31,10 @@ function newNumeralSystem(number) {
     let valueLetter = lettersNumbers.indexOf(number);
     let resp= [];
     
-    console.log(valueLetter);
     for (const alma in lettersNumbers) {
         for(const gemea in lettersNumbers) {
             if(parseInt(alma) + parseInt(gemea) === valueLetter && resp.indexOf(lettersNumbers[gemea] + " + " + lettersNumbers[alma]) == -1){
                 resp.push(lettersNumbers[alma] + " + " + lettersNumbers[gemea]);
-                console.log(alma + " + " + gemea);
                 continue
             } 
         }
